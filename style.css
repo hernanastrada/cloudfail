@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #1a1a1a;
+    color: #00ff00;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #0d0d0d;
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #333;
+    max-width: 700px;
+    width: 100%;
+    text-align: left;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #cccccc;
+}
+
+.container > p:first-of-type {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #00ff00;
+}
+
+.warning, .hard-warning {
+    background-color: #2a2a2a;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+    padding: 10px 15px;
+    border-radius: 0;
+    font-size: 0.9em;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.hard-warning {
+    background-color: #331111;
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    padding: 15px 20px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.hard-warning h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #ff4d4d;
+    display: flex;
+    align-items: center;
+}
+
+.hard-warning h2 svg {
+    fill: #ff4d4d;
+}
+
+.warning h2 svg {
+    fill: #ffd700;
+}
+
+.hard-warning p {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #f1b0b7;
+}
+
+.warning p {
+    color: #fffacd;
+}
+
+.hard-warning strong, .warning strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 25px;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-group::before {
+    content: "user@lookup:~$";
+    color: #00ff00;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+#domainInput {
+    flex-grow: 1;
+    padding: 10px 12px;
+    border: 1px solid #555;
+    border-radius: 0;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+    background-color: #222;
+    color: #ffffff;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#domainInput:focus {
+    border-color: #00ff00;
+    background-color: #333;
+}
+
+#lookupButton {
+    padding: 10px 18px;
+    background-color: #333;
+    color: #00ff00;
+    border: 1px solid #555;
+    border-radius: 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: 'Source Code Pro', monospace;
+    box-shadow: none;
+}
+
+#lookupButton:hover {
+    background-color: #444;
+    border-color: #00ff00;
+    color: #ffffff;
+}
+
+#lookupButton:disabled {
+    background-color: #222;
+    color: #666;
+    border-color: #444;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#lookupButton:active {
+    background-color: #555;
+    color: #ffffff;
+}
+
+.results-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #111;
+    border-radius: 0;
+    border: 1px dashed #444;
+    min-height: 50px;
+    text-align: left;
+}
+
+.results-container h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 1.1em;
+    word-wrap: break-word;
+}
+
+.results-container p {
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    color: #cccccc;
+}
+
+.results-container p em {
+    color: #aaa;
+    font-style: normal;
+}
+
+.results-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.results-container li {
+    background-color: transparent;
+    padding: 5px 0px;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 3px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    color: #00ff00;
+}
+
+.results-container li strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.results-container ul li ul li {
+    background-color: transparent;
+    border: none;
+    padding: 2px 0px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    color: #90ee90;
+}
+
+.results-container ul li ul {
+    margin-top: 4px;
+}
+
+.results-container li a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.results-container li a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.loading {
+    color: #ffff00;
+    font-style: normal;
+    text-align: center;
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.error {
+    color: #ff4d4d;
+    font-weight: 700;
+    text-align: left;
+    background-color: #221111;
+    padding: 5px 10px;
+    border: 1px solid #ff4d4d;
+}
+
+.error strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.external-tools {
+    margin-top: 30px;
+    text-align: left;
+    border-top: 1px dashed #444;
+    padding-top: 20px;
+}
+
+.external-tools h2 {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.external-tools p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: #cccccc;
+}
+
+.external-tools ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.external-tools li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.95em;
+    color: #cccccc;
+}
+
+.external-tools li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00ff00;
+    font-size: 1.1em;
+}
+
+.external-tools a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.external-tools a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.subdomain-results h3 {
+    color: #eeeeee;
+}
+
+.subdomain-results > p {
+    font-size: 0.9em;
+    color: #bbbbbb;
+    margin-bottom: 10px;
+}
+
+.subdomain-results > ul > li > strong {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffffff;
+}
