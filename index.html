@@ -1,0 +1,43 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ＣＬＯＵＤＦＡＩＬ </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1> ＣＬＯＵＤＦＡＩＬ </h1>
+        <div class="warning hard-warning">
+            <h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: middle; margin-right: 5px;"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> Descubrir la IP Real Detrás de Cloudflare</h2>
+            <p> No existe un "motor" o método simple que funcione siempre, Se requiere investigación avanzada y el uso de técnicas indirectas.</p>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="domainInput" placeholder="ejemplo.com">
+            <button id="lookupButton">::::: ESCANEAR SITIO WEB :::::</button>
+        </div>
+
+        <div id="results" class="results-container" aria-live="polite">
+            <!-- Los resultados se mostrarán aquí -->
+        </div>
+
+        <div class="external-tools">
+            <ul>
+                <li><strong>Herramienta muy util:</strong> <a href="https://viewdns.info/iphistory/?domain=" target="_blank" rel="noopener noreferrer">ViewDNS.info</a> ofrece el historial de las IP activas en el dominio.</li> 
+                 <li><strong>Escaneo DNS de profundidad:</strong> <a href="https://megapings.com/datadns/" target="_blank" rel="noopener noreferrer">megapings.com/datadns</a> Es muy buena idea el escaneo de profundidad a las DNS de un dominio, con esta utilidad web la red de twitter (ahora x.com) a la que le pusieron cloudflare, se ven expuestas varias ip reales que pertenecen al hosting de Amazon  </li>
+            </ul>
+           
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<div style="text-align: right;">
+    <a href="https://megapings.com" style="right: 0px; position: fixed; top: 100px;"><img src="https://megapings.com/logo2.png" alt=
+    "" /></a>
+</div>
+</html>
